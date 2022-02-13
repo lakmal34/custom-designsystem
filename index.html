@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html class="theme light">
+  <head>
+    <title>BabelAI</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" id="theme_style" href="./build/css/light.css">
+    <link rel="stylesheet" href="./assets/fonts/icon.css">
+    <!-- <link rel="stylesheet" id="rtl_style" href="./build/css/light-rtl.css"> -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="./build/js/selectize.min.js"></script>
+  </head>
+  <body class="bg-light position-relative" style="min-height: 100vh;">
+
+    <div class="px-0 position-fixed bg-base d-xl-flex flex-column sideMenu d-none sidemenu-opened">
+      <!-- start -->
+      <div class="brand bg-base p-3">
+        <img src="assets/img/logo.png"/>
+      </div>
+      <div class="d-flex flex-column justify-content-between overflow-auto">
+        <div class="p-3 bg-base">
+          <div class="d-flex">
+            <a class="accordion-item text-decoration-none text-dark px-2 py-2 col">
+              <div class="py-1 d-flex flex-row align-items-center">
+                <span class="icon-dashboard icon-md me-3"></span>Dashboard
+              </div>
+            </a>
+          </div>
+            <div class="accordion " id="accordionFlushExample">
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      <span class="icon-user icon-md me-3"></span>Account
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    
+                    <div class="subMenu">
+                      <div class="d-flex">
+                        <a class="text-decoration-none text-dark py-2 px-5 col">Profile</a>
+                      </div>
+                      <div class="d-flex">
+                        <a class="text-decoration-none text-dark py-2 px-5 col">Security</a>
+                      </div>
+                        <div class="accordion-item border-0">
+                          <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed py-2 px-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                              Settings
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo">
+                            <div class="py-2 px-3">
+                              <div class="d-flex">
+                                <a class="text-decoration-none text-dark py-2 px-5 col">Locale</a>
+                              </div>
+                              <div class="d-flex">
+                                <a class="text-decoration-none text-dark py-2 px-5 col">Privacy</a>
+                              </div>
+                              <div class="d-flex">
+                                <a class="text-decoration-none text-dark py-2 px-5 col">Notifications</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item border-0">
+                          <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed py-2 px-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                              Billing
+                            </button>
+                          </h2>
+                          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour">
+                            <div class="py-2 px-3">
+                              <div class="d-flex">
+                                <a class="text-decoration-none text-dark py-2 px-5 col">Subscription</a>
+                              </div>
+                              <div class="d-flex">
+                                <a class="text-decoration-none text-dark py-2 px-5 col">Accounts</a>
+                              </div>
+                              <div class="d-flex">
+                                <a class="text-decoration-none text-dark py-2 px-5 col">Payment Method</a>
+                              </div>
+                              <div class="d-flex">
+                                <a class="text-decoration-none text-dark py-2 px-5 col">Invoices</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      <div class="d-flex">
+                        <a class="text-decoration-none text-dark py-2 px-5 col">Notifications</a>
+                      </div>
+                    </div>      
+                  </div>
+                </div>
+                
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        <span class="icon-bot icon-md me-3"></span>Apps
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="subMenu">
+                      <div class="d-flex">
+                        <a class="text-decoration-none text-dark py-2 px-5 col">New App</a>
+                      </div>
+                      <div class="d-flex">
+                        <a class="text-decoration-none text-dark py-2 px-5 col">My Apps</a>
+                      </div>
+                      <div class="d-flex">
+                        <a class="text-decoration-none text-dark py-2 px-5 col">History</a>
+                      </div>
+                      <div class="d-flex">
+                        <a class="text-decoration-none text-dark py-2 px-5 col">Invitations</a>
+                      </div>
+                      <div class="d-flex">
+                        <a class="text-decoration-none text-dark py-2 px-5 col">Discover</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header" id="flush-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                      <span class="icon-events icon-md me-3"></span>Teams
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                    <div class="subMenu">
+                      <div class="d-flex">
+                        <a class="text-decoration-none text-dark py-2 px-5 col">New Team</a>
+                      </div>
+                      <div class="d-flex">
+                        <a class="text-decoration-none text-dark py-2 px-5 col">My Teams</a>
+                      </div>
+                      <div class="d-flex">
+                        <a class="text-decoration-none text-dark py-2 px-5 col">Invitations</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header" id="flush-headingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                      <span class="icon-share-knowledge icon-md me-3"></span>
+                      Publishers
+                    </button>
+                  </h2>
+                  <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                    <div class="subMenu">
+                      <div class="d-flex">
+                        <a class="text-decoration-none text-dark py-2 px-5 col">New Publisher</a>
+                      </div>
+                      <div class="d-flex">
+                        <a class="text-decoration-none text-dark py-2 px-5 col">My Publishers</a>
+                      </div>
+                      <div class="d-flex">
+                        <a class="text-decoration-none text-dark py-2 px-5 col">Invitations</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item border-0">
+                  <h2 class="accordion-header" id="flush-headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                      <span class="icon-api icon-md me-3"></span>
+                      API
+                    </button>
+                  </h2>
+                  <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                    <div class="subMenu">
+                      <div class="d-flex">
+                        <a class="text-decoration-none text-dark py-2 px-5 col">My Tokens</a>
+                      </div>
+                      <div class="d-flex">
+                        <a class="text-decoration-none text-dark py-2 px-5 col">My Usage</a>
+                      </div>
+                      <div class="d-flex">
+                        <a class="text-decoration-none text-dark py-2 px-5 col">Documentation</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex mt-3">
+                <a class="text-decoration-none accordion-item text-dark px-2 py-2 col">
+                  <div class="py-1 d-flex flex-row align-items-center">
+                    <span class="icon-help icon-md me-3"></span>Help
+                  </div>
+                </a>
+              </div>
+        </div>
+        <div>
+          <div class="p-3">
+            <div class="d-flex flex-column p-3 alert alert-warning mb-0">
+              <div class="d-flex flex-row align-items-center justify-content-between mb-2">
+                <div class="d-flex flex-row align-items-center">
+                  <span class="icon-upgrade icon-md me-2"></span>
+                  <p class="text-md mb-0 text-md">Upgrade to Pro</p>
+                </div>
+                <div>
+                  <a>
+                    <span class="icon-close icon-md"></span>
+                  </a>
+                </div>
+              </div>
+              <p class="text-md mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sagittis efficitur libero nec malesuada</p>
+            </div>
+          </div>
+          <div class="d-flex flex-row p-3">
+            <div class="d-flex flex-row bg-light w-100 theme-switcher">
+              <a id="theme-light" rel="./build/css/light.css"  class="me-1 w-50 p-2 text-decoration-none d-flex align-items-center justify-content-center active-theme">
+                <span class="icon-sun icon-md me-2"></span>
+                Light
+              </a>
+              <a  id="theme-dark" rel="./build/css/dark.css" class="w-50 p-2 text-decoration-none d-flex align-items-center justify-content-center">
+                <span class="icon-moon icon-md me-2"></span>
+                Dark
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- end -->
+    </div>
+
+    <div class="px-0 position-fixed bg-base flex-column justify-content-between sideMenu-mobile d-none d-sm-flex d-xl-none overflow-auto">
+      <div>
+        <div class="brand bg-base px-3 py-3">
+          <img src="assets/img/logo.png"/>
+        </div>
+        <div class="p-3 bg-base">
+          <div class="d-flex">
+            <a class="text-decoration-none px-2 py-2 col">
+              <div class="py-1">
+                <span class="icon-dashboard icon-md"></span>
+              </div>
+            </a>
+          </div>
+          <div class="d-flex">
+            <a class="text-decoration-none text-dark px-2 py-2 col">
+              <div class="py-1">
+                <span class="icon-user icon-md"></span>
+              </div>
+            </a>
+          </div>
+          <div class="d-flex">
+            <a class="text-decoration-none text-dark px-2 py-2 col">
+              <div class="py-1">
+                <span class="icon-bot icon-md"></span>
+              </div>
+            </a>
+          </div>
+          <div class="d-flex">
+            <a class="text-decoration-none text-dark px-2 py-2 col">
+              <div class="py-1">
+                <span class="icon-events icon-md"></span>
+              </div>
+            </a>
+          </div>
+          <div class="d-flex">
+            <a class="text-decoration-none text-dark px-2 py-2 col">
+              <div class="py-1">
+                <span class="icon-share-knowledge icon-md"></span>
+              </div>
+            </a>
+          </div>
+          <div class="d-flex">
+            <a class="text-decoration-none text-dark px-2 py-2 col">
+              <div class="py-1">
+                <span class="icon-api icon-md"></span>
+              </div>
+            </a>
+          </div>
+            <div class="d-flex mt-3">
+              <a class="text-decoration-none text-dark px-2 py-2 col">
+                <div class="py-1">
+                  <span class="icon-help icon-md"></span>
+                </div>
+              </a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-main">
+      <div class="position-relative">
+        <div class="p-3 d-flex bg-base justify-content-between justify-content-sm-end justify-content-xl-between babel-navbar">
+          <div class="brand bg-base d-flex d-xs-flex align-items-center justify-content-center d-sm-none">
+            <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" class="text-decoration-none">
+              <span class="icon-menu icon-md"></span>
+            </a>
+            <img class="ms-3 d-none d-sm-flex" src="assets/img/logo.png"/>
+          </div>
+          <a class="text-decoration-none d-none d-xl-flex align-items-center justify-content-between" id="sidemenu-toggle">
+            <span class="icon-menu icon-md"></span>
+          </a> 
+          <div class="d-flex flex-row align-items-center">
+
+            <a class="me-4 d-xl-none" data-bs-toggle="offcanvas" href="#offcanvasExample3" role="button" aria-controls="offcanvasExample">
+              <span class="icon-search icon-md"></span>
+            </a>
+
+            <div class="input-group nav-search me-4 d-none d-xl-flex position-relative">
+              <button class="btn btn-outline-secondary dropdown-toggle border px-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">Everywhere</button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Everywhere  </a></li>
+              </ul>
+              <input type="text" class="form-control px-2 pl-2 pr-5" aria-label="Text input with dropdown button" placeholder="Search">
+              <span class="icon-search icon-sm"></span>
+            </div>
+
+            <a class="me-4 position-relative" data-bs-toggle="offcanvas" href="#offcanvasExample2" role="button" aria-controls="offcanvasExample">
+              <span class="icon-notification icon-md"></span>
+              <div style="width:10px; height:10px; border-radius:50%; position:absolute; top:2px; right: 0px;" class="bg-danger"></div>
+            </a>
+
+            <div class="dropdown">
+              <a class="d-flex flex-row align-items-center text-decoration-none" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+                <img src="assets/img/Avatar.png" class="me-2 avatar-user"/>
+                <span class="d-none d-md-block">Jane</span>
+                <span class="icon-caret--down icon-md"></span>
+              </a>
+              <ul class="dropdown-menu border-0 shadow" aria-labelledby="dropdownMenuButton1">
+                <li>
+                  <div class="d-flex flex-row justify-content-between dropdown-item">
+                    <span>Lynn Fontenot</span>
+                    <span class="badge bg-success">Free</span>
+                  </div>
+                </li>
+                <li><a class="dropdown-item" href="#">My Profile</a></li>
+                <li><a class="dropdown-item" href="#">My Apps</a></li>
+                <li><a class="dropdown-item" href="#">Lock Screen</a></li>
+                <li>
+                  <div class="d-flex flex-row justify-content-between align-items-center dropdown-item">
+                    <span>Dark Mode</span>
+                    <div class="form-check form-switch form-switch-md">
+                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="d-flex flex-row justify-content-between align-items-center dropdown-item">
+                    <span>RTL Mode</span>
+                    <div class="form-check form-switch form-switch-md">
+                      <input class="form-check-input rtl-switch" type="checkbox" role="switch" id="flexSwitchCheckDefault" rel="./build/css/light-rtl.css" >
+                    </div>
+                  </div>
+                </li>
+                <li><a class="dropdown-item text-danger" href="#">Sign Out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-relative content-top bg-base" style="top: 80px;">
+        <div class="bg-light p-2 p-md-4" style="border-radius: 8px;">
+          <div class="bg-base shadow" style="border-radius: 8px;">
+            <div class="px-4 py-3 border-bottom border-light">
+              <h4 class="mb-0">Profile</h4>
+              <div class="d-flex flex-row align-items-center bi-breadcrumb">
+                <div class="breadcrumb-inner">
+                  <a>Account</a>
+                  <span class="icon-chevron--right icon-md mx-2"></span>
+                  <span>Profile</span>
+                </div>
+              </div>
+            </div>
+  
+            <div class="px-3 py-4">
+  
+              <div class="border p-3 p-xl-4 mb-4" style="border-radius: 8px;">
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                  <h5>Name</h5>
+                  <button class="btn btn-primary">
+                    <span class="d-flex align-items-center">
+                      <span class="icon-save icon-md"></span>
+                      Save
+                    </span>
+                  </button>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-12 col-xl-3 mb-3 mb-xl-0 d-none d-xl-block">
+                    <h6 class="text-muted">
+                      Name<span class="text-danger">*</span>
+                    </h6>
+                  </div>
+                  <div class="col-12 col-xl-9">
+                    <div class="row">
+                      <div class="col-12 col-lg-2 mb-3 mb-xl-3">
+                        <label for="exampleFormControlInput1" class="form-label">Prefix</label>
+                        <select class="form-select form-select-lg" aria-label="Default select example">
+                        </select>
+                      </div>
+                      <div class="col-12 col-lg-5 mb-3 mb-xl-3">
+                        <label for="exampleFormControlInput1" class="form-label">First Name<span class="text-danger">*</span></label>
+                        <input class="form-control form-control-lg" type="text" aria-label=".form-control-lg example">
+                      </div>
+                      <div class="col-12 col-lg-5 mb-3 mb-xl-3">
+                        <label for="exampleFormControlInput1" class="form-label">Middle Name</label>
+                        <input class="form-control form-control-lg" type="text" aria-label=".form-control-lg example">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 col-lg-10  mb-3 mb-xl-0">
+                        <label for="exampleFormControlInput1" class="form-label">Last Name<span class="text-danger">*</span></label>
+                          <input class="form-control form-control-lg" type="text" aria-label=".form-control-lg example">
+                      </div>
+                      <div class="col-12 col-lg-2 mb-3 mb-xl-0">
+                        <label for="exampleFormControlInput1" class="form-label">Suffix</label>
+                        <select class="form-select form-select-lg" aria-label="Default select example">
+                        </select>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-12 col-xl-3 mb-3 mb-xl-0 d-none d-xl-block">
+                    <h6>
+                      Display Name
+                    </h6>
+                  </div>
+                  <div class="col-12 col-xl-9">
+                    <div class="row">
+                      <div class="col-12 col-xl-6 mb-3 mb-xl-0">
+                          <label for="exampleFormControlInput1" class="form-label d-xl-none">Display Name</label>
+                          <input class="form-control form-control-lg" type="text" aria-label=".form-control-lg example">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="border p-3 p-xl-4 mb-4" style="border-radius: 8px;">
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                  <h5>Details</h5>
+                  <button class="btn btn-primary">
+                    <span class="d-flex flex-row align-items-center">
+                      <span class="icon-save icon-md"></span>
+                      Save
+                    </span>
+                  </button>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-12 col-xl-3 mb-3 mb-xl-0">
+                    <h6>
+                      Birth Day
+                    </h6>
+                  </div>
+                  <div class="col-12 col-xl-9">
+                    <div class="row">
+                      <div class="col-12 col-xl-2 mb-3 mb-xl-0">
+                          <label for="exampleFormControlInput1" class="form-label">Month</label>
+                          <select class="form-select form-select-lg" aria-label="Default select example">
+                          </select>
+                      </div>
+                      <div class="col-12 col-xl-2 mb-3 mb-xl-0">
+                        <label for="exampleFormControlInput1" class="form-label">Date</label>
+                        <select class="form-select form-select-lg" aria-label="Default select example">
+                        </select>
+                      </div>
+                      <div class="col-12 col-xl-2 mb-3 mb-xl-0">
+                        <label for="exampleFormControlInput1" class="form-label">Year</label>
+                        <select class="form-select form-select-lg" aria-label="Default select example">
+                        </select>
+                      </div>
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-12 col-xl-3">
+                    <h6>
+                      Gender
+                    </h6>
+                  </div>
+                  <div class="col-12 col-xl-9">
+                    <div class="row">
+                      <div class="col-12 col-xl-6 mb-3 mb-xl-0">
+                        <select class="form-select form-select-lg" aria-label="Default select example"></select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-12 col-xl-3">
+                    <h6>
+                      Location
+                    </h6>
+                  </div>
+                  <div class="col-12 col-xl-9">
+                    <div class="row">
+                      <div class="col-12 col-xl-6 mb-3 mb-xl-0">
+                        <div class="input-group input-group-lg">
+                          <input type="text" class="form-select form-select-lg" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                          <button class="btn btn-secondary-primary border" type="button" id="button-addon2">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M15 7.5H13.9746C13.8548 6.08818 13.2396 4.76421 12.2377 3.76231C11.2358 2.76042 9.91182 2.14517 8.5 2.0254V1H7.5V2.0254C6.08818 2.14517 4.76421 2.76042 3.76231 3.76231C2.76042 4.76421 2.14517 6.08818 2.0254 7.5H1V8.5H2.0254C2.14517 9.91182 2.76042 11.2358 3.76231 12.2377C4.76421 13.2396 6.08818 13.8548 7.5 13.9746V15H8.5V13.9746C9.91182 13.8548 11.2358 13.2396 12.2377 12.2377C13.2396 11.2358 13.8548 9.91182 13.9746 8.5H15V7.5ZM8.5 12.9746V11H7.5V12.9746C6.35311 12.8577 5.28166 12.3487 4.46648 11.5335C3.6513 10.7183 3.14231 9.64689 3.0254 8.5H5V7.5H3.0254C3.14231 6.35311 3.6513 5.28166 4.46648 4.46648C5.28166 3.6513 6.35311 3.14231 7.5 3.0254V5H8.5V3.0254C9.64689 3.14231 10.7183 3.6513 11.5335 4.46648C12.3487 5.28166 12.8577 6.35311 12.9746 7.5H11V8.5H12.9746C12.8577 9.64689 12.3487 10.7183 11.5335 11.5335C10.7183 12.3487 9.64689 12.8577 8.5 12.9746Z" fill="black"/>
+                              </svg>
+                          </button>
+                          <button class="btn btn-primary" type="button" id="button-addon2">Set Location</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-12 col-xl-3">
+                    <h6>
+                      Organization
+                    </h6>
+                  </div>
+                  <div class="col-12 col-xl-9">
+                    <div class="row">
+                      <div class="col-12 col-xl-6 mb-3 mb-xl-0">
+                        <input class="form-control form-control-lg" type="text" aria-label=".form-control-lg example">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="border border-warning p-3 p-xl-4 mb-4" style="border-radius: 8px;">
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                  <div class="d-flex flex-row align-items-center mb-1">
+                    <h5 class="mb-0">Email Address</h5>
+                    <div class="text-warning d-flex flex-row align-items-center ms-2">
+                      <span class="icon-warning me-1"></span>
+                      Your email address is not verified.
+                    </div>
+                  </div>
+                  
+                  <button class="btn btn-primary">
+                    <span class="d-flex flex-row align-items-center">
+                      <span class="icon-save icon-md"></span>
+                      Save
+                    </span>
+                  </button>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-12 col-xl-3 mb-3 mb-xl-0 d-none d-xl-block">
+                    <h6>
+                      Email Address<span class="text-danger">*</span>
+                    </h6>
+                  </div>
+                  <div class="col-12 col-xl-9">
+                    <div class="row">
+                      <div class="col-12 col-xl-6">
+                          <label for="exampleFormControlInput1" class="form-label">Email Address<span class="text-danger">*</span></label>
+                          <input class="form-control form-control-lg" type="text" aria-label=".form-control-lg example">
+                      </div>
+                      <div class="col-12 col-xl-6">
+                        <div class="d-none d-xl-block">
+                          <label for="exampleFormControlInput1" class="form-label" style="visibility: hidden;">Email Address<span class="text-danger">*</span></label>
+                        </div>
+                        <button class="btn btn-lg btn-outline-primary mt-2 mt-xl-0">
+                          Resend Verification Email
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="border p-3 p-xl-4" style="border-radius: 8px;">
+                <div class="d-flex flex-row justify-content-between align-items-center">
+                  <h5>Phone Numbers</h5>
+                  <button class="btn btn-primary">
+                    <span class="d-flex flex-row align-items-center">
+                      <span class="icon-save icon-md"></span>
+                      Save
+                    </span>
+                  </button>
+                </div>
+                <div class="row mt-4">
+                  <div class="col-12 col-xl-3 mb-3 mb-xl-0 d-none d-xl-block">
+                    <h6>
+                      Phone Numbers
+                    </h6>
+                  </div>
+                  <div class="col-12 col-xl-9">
+                    <div class="row">
+                      <div class="col-12 col-xl-3 mb-3 mb-xl-0">
+                          <label for="exampleFormControlInput1" class="form-label">Country</label>
+                          <select class="form-select form-select-lg" aria-label="Default select example">
+                          </select>
+                      </div>
+                      <div class="col-12 col-xl-3 mb-3 mb-xl-0">
+                        <label for="exampleFormControlInput1" class="form-label">Type</label>
+                        <select class="form-select form-select-lg" aria-label="Default select example">
+                        </select>
+                      </div>
+                      <div class="col-12 col-xl-3 mb-3 mb-xl-0">
+                        <label for="exampleFormControlInput1" class="form-label">Number<span class="text-danger">*</span></label>
+                        <input class="form-control form-control-lg" type="text" aria-label=".form-control-lg example">
+                      </div>
+                      <div class="col-12 col-xl-3 mb-3 mb-xl-0">
+                        <label for="exampleFormControlInput1" class="form-label">Extension</label>
+                        <input class="form-control form-control-lg" type="text" aria-label=".form-control-lg example">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-center mt-3">
+                        <div class="d-flex flex-row align-items-center">
+                          <div class="form-check me-3">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Opt in to SMS notifications
+                            </label>
+                          </div>
+                          <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Set as default</label>
+                          </div>
+                        </div>
+                        <div class="d-flex flex-row mt-3 mt-lg-0">
+                          <button type="button" class="btn btn-sm btn-outline-primary me-2">
+                            <span class="d-flex flex-row align-items-center">
+                              <span class="icon-add icon-md"></span>Add New
+                            </span>
+                            </button>
+                          <button type="button" class="btn btn-sm btn-outline-danger">
+                            <span class="d-flex flex-row align-items-center">
+                              <span class="icon-delete icon-md"></span>Remove
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+  
+            </div>
+  
+  
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <div class="brand">
+          <img src="assets/img/logo.png"/>
+        </div>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body sideMenu pt-0">
+        <div>
+          <div class="bg-base">
+                
+                <div class="d-flex">
+                  <a class="accordion-item text-decoration-none text-dark px-2 py-2 col">
+                    <div class="py-1 d-flex flex-row align-items-center">
+                      <span class="icon-dashboard icon-md me-3"></span>Dashboard
+                    </div>
+                  </a>
+                </div>
+                  <div class="accordion " id="accordionFlushExample">
+                      <div class="accordion-item border-0">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <span class="icon-user icon-md me-3"></span>Account
+                          </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                          
+                          <div class="subMenu">
+                            <div class="d-flex">
+                              <a class="text-decoration-none text-dark py-2 px-5 col">Profile</a>
+                            </div>
+                            <div class="d-flex">
+                              <a class="text-decoration-none text-dark py-2 px-5 col">Security</a>
+                            </div>
+                              <div class="accordion-item border-0">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                  <button class="accordion-button collapsed py-2 px-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                    Settings
+                                  </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo">
+                                  <div class="py-2 px-3">
+                                    <div class="d-flex">
+                                      <a class="text-decoration-none text-dark py-2 px-5 col">Locale</a>
+                                    </div>
+                                    <div class="d-flex">
+                                      <a class="text-decoration-none text-dark py-2 px-5 col">Privacy</a>
+                                    </div>
+                                    <div class="d-flex">
+                                      <a class="text-decoration-none text-dark py-2 px-5 col">Notifications</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion-item border-0">
+                                <h2 class="accordion-header" id="flush-headingFour">
+                                  <button class="accordion-button collapsed py-2 px-5" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                                    Billing
+                                  </button>
+                                </h2>
+                                <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour">
+                                  <div class="py-2 px-3">
+                                    <div class="d-flex">
+                                      <a class="text-decoration-none text-dark py-2 px-5 col">Subscription</a>
+                                    </div>
+                                    <div class="d-flex">
+                                      <a class="text-decoration-none text-dark py-2 px-5 col">Accounts</a>
+                                    </div>
+                                    <div class="d-flex">
+                                      <a class="text-decoration-none text-dark py-2 px-5 col">Payment Method</a>
+                                    </div>
+                                    <div class="d-flex">
+                                      <a class="text-decoration-none text-dark py-2 px-5 col">Invoices</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            <div class="d-flex">
+                              <a class="text-decoration-none text-dark py-2 px-5 col">Notifications</a>
+                            </div>
+                          </div>      
+                        </div>
+                      </div>
+                      
+                      <div class="accordion-item border-0">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                              <span class="icon-bot icon-md me-3"></span>Apps
+                          </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                          <div class="subMenu">
+                            <div class="d-flex">
+                              <a class="text-decoration-none text-dark py-2 px-5 col">New App</a>
+                            </div>
+                            <div class="d-flex">
+                              <a class="text-decoration-none text-dark py-2 px-5 col">My Apps</a>
+                            </div>
+                            <div class="d-flex">
+                              <a class="text-decoration-none text-dark py-2 px-5 col">History</a>
+                            </div>
+                            <div class="d-flex">
+                              <a class="text-decoration-none text-dark py-2 px-5 col">Invitations</a>
+                            </div>
+                            <div class="d-flex">
+                              <a class="text-decoration-none text-dark py-2 px-5 col">Discover</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="accordion-item border-0">
+                        <h2 class="accordion-header" id="flush-headingFive">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                            <span class="icon-events icon-md me-3"></span>Teams
+                          </button>
+                        </h2>
+                        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                          <div class="subMenu">
+                            <div class="d-flex">
+                              <a class="text-decoration-none text-dark py-2 px-5 col">New Team</a>
+                            </div>
+                            <div class="d-flex">
+                              <a class="text-decoration-none text-dark py-2 px-5 col">My Teams</a>
+                            </div>
+                            <div class="d-flex">
+                              <a class="text-decoration-none text-dark py-2 px-5 col">Invitations</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="accordion-item border-0">
+                        <h2 class="accordion-header" id="flush-headingSix">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                            <span class="icon-share-knowledge icon-md me-3"></span>
+                            Publishers
+                          </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                          <div class="subMenu">
+                            <div class="d-flex">
+                              <a class="text-decoration-none text-dark py-2 px-5 col">New Publisher</a>
+                            </div>
+                            <div class="d-flex">
+                              <a class="text-decoration-none text-dark py-2 px-5 col">My Publishers</a>
+                            </div>
+                            <div class="d-flex">
+                              <a class="text-decoration-none text-dark py-2 px-5 col">Invitations</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+      
+                      <div class="accordion-item border-0">
+                        <h2 class="accordion-header" id="flush-headingSeven">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                            <span class="icon-api icon-md me-3"></span>
+                            API
+                          </button>
+                        </h2>
+                        <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                          <div class="subMenu">
+                            <div class="d-flex">
+                              <a class="text-decoration-none text-dark py-2 px-5 col">My Tokens</a>
+                            </div>
+                            <div class="d-flex">
+                              <a class="text-decoration-none text-dark py-2 px-5 col">My Usage</a>
+                            </div>
+                            <div class="d-flex">
+                              <a class="text-decoration-none text-dark py-2 px-5 col">Documentation</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="d-flex mt-3">
+                      <a class="text-decoration-none accordion-item text-dark px-2 py-2 col">
+                        <div class="py-1 d-flex flex-row align-items-center">
+                          <span class="icon-help icon-md me-3"></span>Help
+                        </div>
+                      </a>
+                    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end bg-base" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Notification</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body notification-container">
+        <div class="notification-title p-2 bg-light rounded mb-3">
+          <span class="text-muted">Today</span>
+        </div>
+
+        <a class="notification-item unread p-3 d-flex flex-column rounded mb-2">
+          <div class="d-flex flex-row mb-2">
+            <img src="./assets/img/notification-1.png" width="20px" height="20px"/>
+            <small class="text-muted ms-2">5.00 pm</small>
+          </div>
+          <div>
+            <p class="text-md fw-bold mb-0">Notification Title</p>
+            <p class="mb-0 text-sm">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+          </div>
+        </a>
+
+        <a class="notification-item p-3 d-flex flex-column rounded mb-2">
+          <div class="d-flex flex-row mb-2">
+            <img src="./assets/img/notification-2.png" width="20px" height="20px"/>
+            <small class="text-muted ms-2">5.00 pm</small>
+          </div>
+          <div>
+            <p class="text-md fw-bold mb-0">Notification Title</p>
+            <p class="mb-0 text-sm">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end bg-base" tabindex="-1" id="offcanvasExample3" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Search</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body notification-container">
+        <div class="input-group input-group-sm me-4 d-none d-xl-flex position-relative">
+          <button class="btn btn-outline-secondary dropdown-toggle border px-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">Everywhere</button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Everywhere</a></li>
+          </ul>
+          <input type="text" class="form-control px-2 pl-2 pr-5" aria-label="Text input with dropdown button" placeholder="Search">
+          <span class="icon-search icon-sm"></span>
+        </div>
+      </div>
+    </div>
+
+
+
+
+      <script>
+          $(document).ready(function(){
+              $("#select-beast").selectize({
+                  create: true,
+                  sortField: "text",
+              });
+          })
+
+          $("#theme-light").click(function(){
+            $(this).addClass('active-theme');
+            $("#theme-dark").removeClass('active-theme');
+            $("#theme_style").attr("href",$(this).attr('rel'));
+		        return false;
+          });
+          $("#theme-dark").click(function(){
+            $(this).addClass('active-theme');
+            $("#theme-light").removeClass('active-theme');
+            $("#theme_style").attr("href",$(this).attr('rel'));
+          });
+          $(".rtl-switch").change(function() {
+            if(this.checked) {
+              $("#theme_style").attr("href",$(this).attr('rel'));
+            }
+            else{
+              $("#theme_style").attr("href",'build/css/light.css');
+            }
+          });
+
+          // $('.play-pause').on('click', function(){
+          //   var isPause = this.src.indexOf('pause.png') != -1;
+          //   this.src    = isPause  ? this.src.replace('pause.png', 'play.png') : this.src.replace('play.png','pause.png');
+          //   $('.cycle-slideshow').cycle(isPause ? 'resume' : 'pause');   
+          // });
+          
+
+      </script>
+  </body>
+</html>

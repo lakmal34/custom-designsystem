@@ -1,0 +1,98 @@
+.sideMenu{
+  height: 100vh;
+    a{
+        cursor: pointer;
+        font-weight: 500;
+
+        &:hover{
+          background-color: $sideMenu-btn-hover;
+        }
+    }
+
+    .accordion-button::after{
+      display: none;
+    }
+
+
+.accordion-button {
+    border: 0;
+    @include border-radius(4px);
+    font-weight: 500;
+  
+    &:not(.collapsed) {
+      box-shadow: none;
+      background-color: $base;
+      color:$dark;
+    }
+  
+    &:focus {
+      outline: 0;
+      box-shadow: none;
+    }
+    &:hover{
+      background-color: $sideMenu-btn-hover;
+    }
+  }
+  
+  .accordion-item {
+    border: 0px solid $accordion-border-color;
+    border-radius: 4px !important;
+  
+    &:first-of-type {
+  
+      .accordion-button {
+        border-radius: 4px !important;
+      }
+    }
+  
+    &:not(:first-of-type) {
+      border-top: 0;
+    }
+  
+    // Only set a border-radius on the last item if the accordion is collapsed
+    &:last-of-type {
+      @include border-bottom-radius(0px);
+  
+      .accordion-button {
+        &.collapsed {
+          @include border-bottom-radius(0px);
+        }
+      }
+  
+      .accordion-collapse {
+        @include border-bottom-radius(0px);
+      }
+    }
+  }
+
+  .subMenu{
+    a{
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+      @include border-radius(4px);
+    }
+      .accordion-button{
+        padding: 0px 0px;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        @include border-radius(4px);
+      }
+  }
+  
+  
+}
+
+
+@include media-breakpoint-up(xl) {
+  .sideMenu{
+    width:280px; 
+    height:100vh;
+  }
+  
+}
+
+.sideMenu-mobile{
+  height: 100vh;
+}

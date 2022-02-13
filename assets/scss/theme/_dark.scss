@@ -1,0 +1,213 @@
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+}
+
+$nutral:  #c0c2c5;
+$white:   #ffffff;
+$blue:    #6161F4;
+$red:     #FF6A55;
+$yellow:  #FFBF55;
+$green:   #14B8A6;
+$cyan:    #5595FF;
+
+$gray-100:  #F7F7F8; /* bg-light border-light */
+$gray-200:  #e6e7e8; /* input disabled */
+$gray-300:  #d9dadc;
+$gray-400:  #cdced1; /* border color - border-default  */
+$gray-500:  #c0c2c5;
+$gray-600:  #9a9b9e;
+$gray-700:  #737476;
+$gray-800:  #303131;
+$gray-900:  #262727; /* bg-dark */
+
+$primary:       $blue;
+$secondary:     $gray-300;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-800;
+$dark:          $white;
+$base:          $gray-900;
+
+$min-contrast-ratio:   0;
+
+/* Typography styles */
+$link-color:  $primary;
+$body-color:  $gray-100;
+$text-muted:  $gray-400;
+$font-family-sans-serif: 'Urbanist', sans-serif;
+$font-weight-bold:            500;
+$font-weight-bolder:          700;
+$line-height-sm:              1.428;
+$link-color: $dark;
+$link-decoration:  none;
+
+/* Background */
+.bg-base{
+    background-color:  $gray-900;
+}
+
+/* Border styles */
+$border-color:  $gray-700;
+
+/* Shadow */
+$box-shadow:  0 4px 4px rgba($gray-700, .10);
+
+/* Button and Form styles */
+$btn-hover-bg-shade-amount:       10%;
+$btn-hover-bg-tint-amount:        10%;
+$btn-hover-border-shade-amount:   10%;
+$btn-hover-border-tint-amount:    10%;
+$btn-active-bg-shade-amount:      10%;
+$btn-active-bg-tint-amount:       10%;
+$btn-active-border-shade-amount:  10%;
+$btn-active-border-tint-amount:   10%;
+$btn-link-color:  $primary; 
+$btn-link-hover-color: tint($primary,90%);   
+$btn-disabled-opacity:        0.65;
+$input-border-color:  $gray-700;
+$form-check-input-border: 1px solid $gray-700;
+$input-bg:  $light;
+$form-select-indicator-color:       $gray-200;
+$dropdown-link-color:               $text-muted;
+$dropdown-bg:                       $light !default;
+$form-switch-bg-image:            url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#ffffff'/></svg>") !default;
+$input-btn-padding-y:         .5rem;
+$input-btn-padding-x:         1.5rem;
+$input-btn-padding-y-sm:      .25rem;
+$input-btn-padding-x-sm:      1.5rem;
+$input-btn-padding-y-lg:      .75rem;
+$input-btn-padding-x-lg:      1.5rem;
+$dropdown-min-width:                14rem;
+$dropdown-padding-x:                0rem;
+$dropdown-padding-y:                0rem;
+$dropdown-item-padding-y:           0.75rem;
+$dropdown-item-padding-x:           0.75rem;
+$dropdown-font-size:                14px;
+$btn-font-size:     0.875rem;
+$btn-font-size-sm:  0.75rem;
+$btn-font-size-lg:  1rem;
+$btn-line-height:   1.5rem;
+$btn-border-radius:           0.5rem;
+$btn-border-radius-sm:        0.5rem;
+$btn-border-radius-lg:        0.5rem;
+$input-border-radius:         0.5rem;
+$input-border-radius-sm:      0.5rem;
+$input-border-radius-lg:      0.5rem;
+$input-btn-font-size-lg:      1rem;
+
+/* Switch */
+$form-switch-width:            2.5em;
+.form-switch{
+    .form-check-input{
+        height: 20px;
+    }
+}
+
+/* Sidemenu */
+$sideMenu-btn-active:shade($primary,10%);
+$sideMenu-btn-hover:shade($primary,10%);
+
+/* Accordian */
+$accordion-bg:  transparent;
+$accordion-button-padding-y:              12px;
+$accordion-button-padding-x:              8px;
+
+/* Badge */
+
+
+/* Offcanvas */
+$offcanvas-bg-color:   $base;
+$offcanvas-color:      $dark;
+$btn-close-bg:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#ffffff'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>");
+
+.notification-container{
+    .unread{
+        background-color: shade($primary,10%);
+    }
+    .notification-item {
+        &:hover{
+            background-color: shade($primary,10%);
+        }
+    }
+}
+
+/* Modal */
+$modal-content-border-radius:12px;
+
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../scss/selectize/selectize.bootstrap5.scss";
+@import "../../scss/components/sideMenu";
+@import "../../scss/common.scss";
+
+
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+}
+
+.dropdown-item{
+    &:hover,
+    &:focus {
+        background-color:shade($primary,10%);
+    }
+}
+
+$input-focus-border-color:   $component-active-bg;
+
+    .form-control{
+        &:focus{
+            background-color: $input-focus-bg;
+            border-color: $input-focus-border-color;
+            box-shadow: $input-focus-box-shadow;
+        }
+    }
+    
+    
+    .form-check-input {
+        &:checked {
+            &[type="radio"] {
+                background-color: $base;
+                border-color: $primary;
+            }
+        } 
+    }
+    
+    .dropdown-item{
+        &:hover,
+        &:focus {
+            background-color:tint($primary,90%);
+        }
+    }
+    
+    .btn-link{
+        &:hover {
+            color:$primary;
+            background-color: $btn-link-hover-color;
+        }
+    }
+
+    .btn-outline-secondary{
+        color:$text-muted !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+            background-color: $base !important;
+            color:$text-muted !important;
+        }
+    }
+
+    .modal-content{
+        border:none;
+        box-shadow: $box-shadow;
+    }

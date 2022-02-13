@@ -1,0 +1,216 @@
+    @function tint($color, $percentage) {
+        @return mix(white, $color, $percentage);
+    }
+
+    @function shade($color, $percentage) {
+        @return mix(black, $color, $percentage);
+    }
+    
+    $nutral:  #c0c2c5;
+    $white:   #ffffff;
+    $blue:    #6161F4;
+    $red:     #FF6A55;
+    $yellow:  #FFBF55;
+    $green:   #14B8A6;
+    $cyan:    #5595FF;
+    
+    $gray-100:  #F2F4F6; /* bg-light border-light tint 90 */
+    $gray-200:  #EFF2F5; /* input disabled tint 60*/
+    $gray-300:  #DFE4E9; /* tint 40 */
+    $gray-400:  #D0D7E0; /* border color - border-default tint 20 */
+    $gray-500:  #BFC9D5; /* nutral */
+    $gray-600:  #737476; /* nutral shade 20 */
+    $gray-700:  #3B4859; /* nutral shade 40 */
+    $gray-800:  #27303D; /* nutral shade 60 */
+    $gray-900:  #13181D; /* nutral shade 80 bg-dark */
+    
+    $primary:       $blue;
+    $secondary:     $gray-500;
+    $success:       $green;
+    $info:          $cyan;
+    $warning:       $yellow;
+    $danger:        $red;
+    $light:         $gray-100;
+    $dark:          $gray-900;
+    $base:          $white;
+    
+    $min-contrast-ratio:   0;
+
+    /* Typography styles*/
+    $link-color:  $primary;
+    $body-color:  $gray-900;
+    $text-muted:  $gray-600;
+    $font-family-sans-serif: 'Urbanist', sans-serif;
+    $font-weight-bold:            500;
+    $font-weight-bolder:          700;
+    $line-height-sm:              1.428;
+    $link-color:    $dark;
+    $link-decoration:  none;
+
+    /* Background */
+    .bg-base{
+        background-color: $base !important;
+    }
+
+    /* Border Styles */
+    $border-color:  $gray-300;
+
+    /* Shadow */
+    $box-shadow:  0 4px 4px rgba($dark, .10);
+
+    /* Button styles */
+    $btn-hover-bg-shade-amount:       10%;
+    $btn-hover-bg-tint-amount:        10%;
+    $btn-hover-border-shade-amount:   10%;
+    $btn-hover-border-tint-amount:    10%;
+    $btn-active-bg-shade-amount:      10%;
+    $btn-active-bg-tint-amount:       10%;
+    $btn-active-border-shade-amount:  10%;
+    $btn-active-border-tint-amount:   10%;
+    $btn-link-color:  $primary; 
+    $btn-link-hover-color: tint($primary,90%);   
+    $btn-disabled-opacity:        0.65;
+    $input-border-color:   $gray-400;
+    $form-select-indicator-color:       $gray-800;
+    $dropdown-link-color:               $text-muted;
+    $form-check-input-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='1' d='M6 10l3 3l6-6'/></svg>");
+    $form-check-radio-checked-bg-image:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#6161F4'/></svg>");
+    $select-color-dropdown-item-active: tint($primary,90%);
+    $input-btn-padding-y:         .5rem;
+    $input-btn-padding-x:         1.5rem;
+    $input-btn-padding-y-sm:      .25rem;
+    $input-btn-padding-x-sm:      1.5rem;
+    $input-btn-padding-y-lg:      .75rem;
+    $input-btn-padding-x-lg:      1.5rem;
+    $dropdown-min-width:                14rem;
+    $dropdown-padding-x:                0rem;
+    $dropdown-padding-y:                0rem;
+    $dropdown-item-padding-y:           0.75rem;
+    $dropdown-item-padding-x:           0.75rem;
+    $dropdown-font-size:                14px;
+    $btn-font-size:     0.875rem;
+    $btn-font-size-sm:  0.75rem;
+    $btn-font-size-lg:  1rem;
+    $btn-line-height:   1.5rem;
+    $btn-border-radius:           0.5rem;
+    $btn-border-radius-sm:        0.5rem;
+    $btn-border-radius-lg:        0.5rem;
+    $input-border-radius:         0.5rem;
+    $input-border-radius-sm:      0.5rem;
+    $input-border-radius-lg:      0.5rem;
+    $input-btn-font-size-lg:      1rem;
+
+    /* Switch */
+    $form-switch-width:               2.5em !default;
+    .form-switch{
+        .form-check-input{
+            height: 20px;
+        }
+    }
+    
+
+    /* Sidemenu */
+    $sideMenu-btn-active:tint($primary,90%);
+    $sideMenu-btn-hover:tint($primary,90%);
+
+    /* Accordian */
+    $accordion-bg:  transparent;
+    $accordion-button-active-bg:transparent;
+    $accordion-button-padding-y:              12px;
+    $accordion-button-padding-x:              8px;
+
+    /* Badges */
+    
+
+    /* Offcanvas */
+    $offcanvas-bg-color:   $base;
+    $offcanvas-color:      $dark;
+    $btn-close-bg:               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#000000'><path d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/></svg>");
+
+    /* Modal */
+    $modal-content-border-radius:12px;
+    
+    .notification-container{
+        .unread{
+            background-color: tint($primary,90%);
+        }
+        .notification-item {
+            &:hover{
+                background-color: tint($primary,90%);
+            }
+        }
+    }
+    
+    @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+    @import "../../scss/selectize/selectize.bootstrap5.scss";
+    @import "../../scss/components/sideMenu";
+    @import "../../scss/common.scss";
+    // @import "../../../node_modules/sweetalert2/src/scss/sweetalert2.scss";
+    
+
+    $input-focus-border-color:   $component-active-bg;
+
+    .form-control{
+        &:focus{
+            background-color: $input-focus-bg;
+            border-color: $input-focus-border-color;
+            box-shadow: $input-focus-box-shadow;
+        }
+    }
+    
+    
+    .form-check-input {
+        &:checked {
+            &[type="radio"] {
+                background-color: $base;
+                border-color: $primary;
+            }
+        } 
+    }
+    
+    .dropdown-item{
+        &:hover,
+        &:focus {
+            background-color:tint($primary,90%);
+        }
+    }
+    
+    .btn-link{
+        &:hover {
+            color:$primary;
+            background-color: $btn-link-hover-color;
+        }
+    }
+
+    .btn-outline-secondary{
+        color:$text-muted !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+            background-color: $base !important;
+            color:$text-muted !important;
+        }
+    }
+
+    .modal-content{
+        border:none;
+        box-shadow: $box-shadow;
+    }
+
+    // swal2
+    $swal2-white:         $base !default;
+    // ICONS
+    $swal2-icon-size: 5em !default;
+    $swal2-icon-animations: true !default;
+    $swal2-icon-margin: 2.5em auto .6em !default;
+    $swal2-icon-font-family: inherit !default;
+    $swal2-icon-font-size: 3.75em !default;
+    $swal2-icon-border-color: #000 !default;
+    $swal2-icon-zoom: null !default;
+    $swal2-success: #a5dc86 !default;
+    $swal2-success-border: rgba($swal2-success, .3) !default;
+    $swal2-error: #f27474 !default;
+    $swal2-warning: #f8bb86 !default;
+    $swal2-info: #3fc3ee !default;
+    $swal2-question: #87adbd !default;
